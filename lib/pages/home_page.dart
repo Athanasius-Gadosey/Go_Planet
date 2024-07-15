@@ -15,7 +15,8 @@ class HomePage extends StatelessWidget {
         child: Container(
           height: _deviceHeight,
           width: _deviceWidth,
-          child: _titlePage(),
+          padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
+          child: _locationDropDownWidget(),
         ),
       ),
     );
@@ -39,6 +40,25 @@ class HomePage extends StatelessWidget {
           fit: BoxFit.fill,
           image: AssetImage("assets/images/astronaut_moon.jpg"),
         ),
+      ),
+    );
+  }
+
+  Widget _locationDropDownWidget() {
+    List<DropdownMenuItem<String>> _items = [
+      'Mike Hope Substation',
+      'Habib Kadiri Engineer',
+      'Jamal Abdul',
+    ]
+        .map((e) => DropdownMenuItem(
+              child: Text(e),
+              value: e,
+            ))
+        .toList();
+    return Container(
+      child: DropdownButton(
+        onChanged: (_) {},
+        items: _items,
       ),
     );
   }
