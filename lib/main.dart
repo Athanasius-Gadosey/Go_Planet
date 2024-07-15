@@ -15,7 +15,7 @@ class PlanetApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color.fromRGBO(25, 50, 26, 1.0),
       ),
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }
