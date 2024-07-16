@@ -53,20 +53,33 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _locationDropDownWidget() {
-    List<DropdownMenuItem<String>> _items = [
-      'Mike Hope Substation',
+    List<String> _items = [
+      'Mike Hope Substation Eng',
       'Habib Kadiri Engineer',
-      'Jamal Abdul',
-    ]
-        .map((e) => DropdownMenuItem(
-              child: Text(e),
-              value: e,
-            ))
-        .toList();
+      'Jamal Abdul Lt',
+    ];
+
     return Container(
+      padding: EdgeInsets.symmetric(horizontal: _deviceWidth * 0.05),
+      width: _deviceWidth,
+      decoration: BoxDecoration(
+        color: Color.fromRGBO(25, 50, 26, 1.0),
+        borderRadius: BorderRadius.circular(10),
+      ),
       child: DropdownButton(
+        value: _items.first,
         onChanged: (_) {},
-        items: _items,
+        items: _items
+            .map(
+              (e) => DropdownMenuItem(
+                child: Text(e),
+                value: e,
+              ),
+            )
+            .toList(),
+        underline: Container(),
+        dropdownColor: const Color.fromRGBO(25, 50, 26, 1.0),
+        style: const TextStyle(color: Colors.white70, fontSize: 16),
       ),
     );
   }
