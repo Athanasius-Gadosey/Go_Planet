@@ -13,7 +13,7 @@ class PlanetApp extends StatelessWidget {
     return MaterialApp(
       title: 'GoPlanet',
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color.fromRGBO(25, 50, 26, 1.0),
+        scaffoldBackgroundColor: const Color.fromRGBO(25, 30, 26, 1.0),
       ),
       home: HomePage(),
     );
